@@ -1,0 +1,17 @@
+1. COUNT() - Đếm số dòng
+Dùng để đếm số dòng (bản ghi) thỏa mãn điều kiện nào đó.
+	SELECT COUNT(column_name) FROM table_name;
+
+2. SUM() - Tính tổng
+Dùng để tính tổng giá trị của một cột số.
+	SELECT SUM(column_name) FROM table_name;
+
+3. AVG() - Tính trung bình
+Dùng để tính giá trị trung bình của một cột số.
+	SELECT AVG(column_name) FROM table_name;
+
+Lưu ý:
+AVG() chỉ tính trên các giá trị không NULL.
+Có thể kết hợp với ROUND() để làm tròn kết quả
+SELECT ROUND(AVG(totalAmount), 2) FROM SalesInvoice;
+👉 Làm tròn giá trị trung bình đến 2 chữ số thập phân.

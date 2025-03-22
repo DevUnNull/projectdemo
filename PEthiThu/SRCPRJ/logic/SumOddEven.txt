@@ -1,0 +1,23 @@
+public class SumOddEven {
+    public static int calculateSum(int[] arr, String option) {
+        int sum = 0;
+        for (int num : arr) {
+            if ("Odd".equalsIgnoreCase(option) && num % 2 != 0) {
+                sum += num;
+            } else if ("Even".equalsIgnoreCase(option) && num % 2 == 0) {
+                sum += num;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        
+        // Test case 1: Tính tổng số lẻ
+        System.out.println("Sum of Odd numbers: " + calculateSum(array, "Odd")); // Output: 9
+        
+        // Test case 2: Tính tổng số chẵn
+        System.out.println("Sum of Even numbers: " + calculateSum(array, "Even")); // Output: 6
+    }
+}

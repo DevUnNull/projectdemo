@@ -1,0 +1,67 @@
+1-1	Dùng khóa ngoại UNIQUE hoặc gộp bảng
+1-N	Thêm khóa ngoại ở bảng N (ở trong bảng N phải thêm thuộc tính của thình tam giác được nối vào và có kiểu = khóa chính của bảng 1)
+N-N	Tạo bảng trung gian với khóa chính (ID_A, ID_B)
+Tự tham chiếu	Dùng khóa ngoại tham chiếu chính nó
+Tổng quát hóa	Chọn TPH (1 bảng) hoặc TPT (nhiều bảng)
+
+- cách đặt tên : 1-N 
+	nếu tên có nghĩa -> tênđó+khóa chính của 1 (tạo ở N)
+	nếu tên không có nghĩa -> đặt tên giống khóa chính của 1
+
+----------------------------------------------------------------------
+vd:
+- Quan hệ 1:1 (One-to-One - 1:1)
+Mỗi bản ghi của bảng A chỉ liên kết với duy nhất một bản ghi của bảng B và ngược lại.
+CREATE TABLE Employee (
+    empCode VARCHAR(20) PRIMARY KEY,
+    name NVARCHAR(50),
+    jobTitle TEXT
+);
+
+CREATE TABLE EmployeeDetails (
+    empCode VARCHAR(20) PRIMARY KEY,
+    address NVARCHAR(100),
+    birthDate DATE,
+    FOREIGN KEY (empCode) REFERENCES Employee(empCode)
+);
+
+
+- Quan hệ 1:N (One-to-Many - 1:N)
+Một bản ghi của bảng A có thể liên kết với nhiều bản ghi của bảng B, nhưng mỗi bản ghi của bảng B chỉ liên kết với một bản ghi của bảng A.
+CREATE TABLE Employee (
+    empCode VARCHAR(20) PRIMARY KEY,
+    name NVARCHAR(50),
+    jobTitle TEXT
+);
+
+CREATE TABLE Project (
+    code VARCHAR(30) PRIMARY KEY,
+    title TEXT,
+    managerEmpCode VARCHAR(20),
+    FOREIGN KEY (managerEmpCode) REFERENCES Employee(empCode)
+);
+
+
+Quan hệ N:N (Many-to-Many - N:N)
+Một bản ghi của bảng A có thể liên kết với nhiều bản ghi của bảng B và ngược lại.
+CREATE TABLE Employee (
+    empCode VARCHAR(20) PRIMARY KEY,
+    name NVARCHAR(50),
+    jobTitle TEXT
+);
+
+CREATE TABLE Tasks (
+    taskNumber INT PRIMARY KEY,
+    description NVARCHAR(100)
+);
+
+CREATE TABLE Employee_Task (
+    empCode VARCHAR(20),
+    taskNumber INT,
+    hours INT,
+    PRIMARY KEY (empCode, taskNumber),
+    FOREIGN KEY (empCode) REFERENCES Employee(empCode),
+    FOREIGN KEY (taskNumber) REFERENCES Tasks(taskNumber)
+);
+
+

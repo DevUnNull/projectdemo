@@ -1,0 +1,7 @@
+- PRJ 
++ đôi tên của từng q một VD: Q1_HE180056
++ khi nộp bài chỉ cần nộp file given
+
+- DBI 
++ tạo thư mục : RollNo_Name_DBI202_PaperNo | VD: he180056_HaiNMN_DBI202_01
++ khi làm bài save các file bài tập vào thư mục ban đầu tạo theo Q1 , Q2 ,... không được để thư mục thừa

@@ -1,0 +1,13 @@
+1. Sắp xếp tăng dần (ASC - mặc định)
+SELECT * FROM Patients 
+ORDER BY FirstName;
+
+
+2. Sắp xếp giảm dần (DESC)
+SELECT * FROM Patients 
+ORDER BY FirstName DESC;
+
+3. Sắp xếp theo nhiều cột
+SELECT * FROM Patients 
+ORDER BY LastName ASC, FirstName DESC;
+

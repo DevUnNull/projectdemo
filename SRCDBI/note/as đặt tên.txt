@@ -1,0 +1,2 @@
+SELECT COUNT(invoiceID) AS NumberOfInvoices
+FROM SalesInvoice;

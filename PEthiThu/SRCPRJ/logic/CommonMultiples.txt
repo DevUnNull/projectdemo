@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class CommonMultiples {
+    public static List<Integer> findFirstThreeCommonMultiples(int num1, int num2) {
+        List<Integer> result = new ArrayList<>();
+        int lcm = lcm(num1, num2); // Tìm Bội chung nhỏ nhất (LCM)
+
+        // Lấy 3 bội chung đầu tiên
+        for (int i = 1; i <= 3; i++) {
+            result.add(lcm * i);
+        }
+        return result;
+    }
+
+    // Hàm tìm Bội chung nhỏ nhất (LCM) dùng Ước số chung lớn nhất (GCD)
+    private static int lcm(int a, int b) {
+        return (a * b) / gcd(a, b);
+    }
+
+    // Hàm tìm Ước số chung lớn nhất (GCD) dùng thuật toán Euclid
+    private static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    public static void main(String[] args) {
+        int number1 = 2;
+        int number2 = 6;
+        List<Integer> multiples = findFirstThreeCommonMultiples(number1, number2);
+        System.out.println(multiples); // Output: [6, 12, 18]
+    }
+}

@@ -1,0 +1,7 @@
+Dùng GROUP BY để nhóm các hàng có cùng giá trị trong một hoặc nhiều cột, thường kết hợp với các hàm tổng hợp (COUNT, SUM, AVG,...).
+VD : 
+	SELECT custID, COUNT(invoiceID) AS NumberOfInvoices
+	FROM SalesInvoice
+	GROUP BY custID;
+Nếu không có GROUP BY, COUNT sẽ chỉ trả về một giá trị tổng.
+có nghĩa là group by những thứ đang không tính 

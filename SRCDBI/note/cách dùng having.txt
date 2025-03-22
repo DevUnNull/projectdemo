@@ -1,0 +1,20 @@
+AVING được dùng để lọc dữ liệu sau khi đã nhóm (GROUP BY).
+a) Dùng với SUM()
+	SELECT mechanicID, SUM(hours) AS totalHours
+	FROM ServiceMehanic
+	GROUP BY mechanicID
+	HAVING SUM(hours) > 5;  -- Chỉ lấy những thợ có tổng giờ làm > 5
+b) Dùng với COUNT()
+	SELECT customerID, COUNT(serviceTicketID) AS totalServices
+	FROM ServiceTicket
+	GROUP BY customerID
+	HAVING COUNT(serviceTicketID) >= 3;  -- Chỉ lấy khách có ít nhất 3 đơn sửa chữa
+c) Dùng với AVG()
+	SELECT mechanicID, AVG(rate) AS avgRate
+	FROM ServiceMehanic
+	GROUP BY mechanicID
+	HAVING AVG(rate) > 4.5;  -- Chỉ lấy thợ có đánh giá trung bình > 4.5
+
+
+Dùng WHERE khi lọc trước khi nhóm (GROUP BY).
+Dùng HAVING khi lọc sau khi nhóm (GROUP BY).
