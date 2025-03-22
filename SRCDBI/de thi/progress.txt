@@ -1,0 +1,168 @@
+// hàm tách date ra 
+DATEPART(YEAR, od.OrderDate) AS [Year],
+    DATEPART(MONTH, od.OrderDate) AS [Month],
+    DATEPART(DAY, od.OrderDate) AS [Day],
+
+//hàm kiểm tra số ngày,tháng,năm của o.RequiredDate,o.ShippedDate cách nhau bao nhiêu đơn vị
+where DATEDIFF(day, o.RequiredDate, o.ShippedDate) > 7
+
+//cách khai báo procedure
+CREATE PROC NAME
+@TENBIEN INT,
+@TENBIEN KIEUDULIEU,
+@TEN OUTPUT //ten du lieu can in ra
+AS
+BEGIN
+
+DIEUKIENCODE
+
+END
+
+//gọi procedure
+DECLARE @x int
+exec TENHAM TENBIEN, @x output
+select @x as TEN
+
+
+//cách khai báo trigger
+CREATE TRIGGER TENTRIGGER
+ON TENBANG
+AFTER INSERT(DIEUkIEN)    FOR UPDATE/DELETE 
+AS
+BEGIN
+
+(DIEU KIEN CODE)
+
+END
+
+//insert
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+//update syntax
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+//DELETE Syntax
+DELETE FROM table_name WHERE condition;
+
+//
+SELECT TOP 3 * FROM Customers;
+
+//Syntax MIN_MAX
+SELECT MIN(column_name)
+FROM table_name
+WHERE condition;
+
+SELECT MAX(column_name)
+FROM table_name
+WHERE condition;
+
+//COUNT
+SELECT COUNT(column_name)
+FROM table_name
+WHERE condition;
+
+//Return the sum of all Quantity fields in the OrderDetails table:
+
+SELECT SUM(Quantity)
+FROM OrderDetails;
+
+//Find the average price of all products:
+
+SELECT AVG(Price)
+FROM Products;
+
+//Return all customers that starts with 'a' or starts with 'b':
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%' OR CustomerName LIKE 'b%';
+
+//Return all customers from 'Germany', 'France', or 'UK'
+
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
+//EXISTS Syntax
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);
+
+//Sort the products from highest to lowest price:
+
+SELECT * FROM Products
+ORDER BY Price DESC;
+
+//CASE Syntax
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+
+//CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+//Syntax
+DROP TABLE table_name;
+
+//To change the data type of a column in a table, use the following syntax:
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype;
+
+
+//ALTER TABLE Customers
+ADD Email varchar(255);
+
+//
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+//To rename a column in a table, use the following syntax:
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
+//sua gia tri bang
+UPDATE model
+SET salary = 2000
+WHERE modelid = 33;
+
+//UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+//delete
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+//contraints
+   CONSTRAINT CHK_Person CHECK (Age>=18 AND City='Sandnes')
+// foreign key
+CREATE TABLE Orders (
+    OrderID int NOT NULL PRIMARY KEY,
+    OrderNumber int NOT NULL,
+    PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
+);
+
+//câu lệnh tạo function
+create function f_tk(@tenbien kieudulieu)
+returns table
+as
+return
+(
+ code
+);
+
+
+
+
+
+
+
+
+
+
+

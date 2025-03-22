@@ -1,0 +1,78 @@
+//PE FALL2021
+2.
+SELECT I.StockItemID,I.StockItemName,SupplierID,Color FROM StockItems I
+
+WHERE Color='Blue'
+
+3.
+SELECT t.SupplierTransactionID,t.SupplierID,s.SupplierName,t.TransactionDate,t.TransactionAmount FROM SupplierTransactions T
+JOIN Suppliers s ON t.SupplierID=s.SupplierID
+WHERE T.TransactionDate BETWEEN '2013-02-01' AND '2013-02-15'
+
+4.
+select si.StockItemID,si.StockItemName,si.SupplierID,
+sl.SupplierName,si.OuterPackageID,p.PackageTypeName as OuterPackageTypeName,
+si.UnitPrice
+from StockItems si
+join Suppliers sl on si.SupplierID=sl.SupplierID
+join PackageTypes p on si.OuterPackageID=p.PackageTypeID
+where StockItemID>=135
+order by OuterPackageTypeName,StockItemName
+
+5.
+select s.SupplierID,s.SupplierName,count( po.PurchaseOrderID) as NumberOfPurchaseOrders from Suppliers s
+left join PurchaseOrders po on s.SupplierID=po.SupplierID
+group by s.SupplierID,s.SupplierName
+order by numberOfPurchaseOrders desc,SupplierName
+
+6.
+select TOP 1 S.UnitPackageID,P.PackageTypeName AS UnitPackageTypeName,COUNT(S.StockItemID) AS NumberOfStockItems from PackageTypes P
+JOIN StockItems S ON P.PackageTypeID=S.UnitPackageID
+group by S.UnitPackageID,P.PackageTypeName
+order by NumberOfStockItems
+
+7.
+with t1 as(
+select PackageTypeID,PackageTypeName,count(s.UnitPackageID) as NumberOfStockItems_UnitPackage from PackageTypes p
+left join StockItems s on s.UnitPackageID=p.PackageTypeID
+
+group by PackageTypeID,PackageTypeName),
+
+ t2 as(
+select PackageTypeID,PackageTypeName,count(s.OuterPackageID) as NumberOfStockItems_OuterPackage from PackageTypes p
+left join StockItems s on s.OuterPackageID=p.PackageTypeID
+
+group by PackageTypeID,PackageTypeName)
+
+select t1.*,NumberOfStockItems_OuterPackage from t1
+join t2 on t1.PackageTypeID=t2.PackageTypeID
+where t1.PackageTypeName IN('Each','Carton','Packet','Pair','Bag','Box')
+order by NumberOfStockItems_OuterPackage desc,NumberOfStockItems_UnitPackage
+
+8.
+CREATE PROC NAME
+@TENBIEN INT,
+@TENBIEN KIEUDULIEU,
+@TEN OUTPUT //ten du lieu can in ra
+AS
+BEGIN
+
+DIEUKIENCODE
+
+END
+
+//gọi procedure
+DECLARE @x int
+exec TENHAM TENBIEN, @x output
+select @x as TEN
+9.
+create trigger Tr5
+on StockItems
+after insert
+as
+begin
+
+select StockItemID,StockItemName,OuterPackageID,p.PackageTypeName as OuterPackageTypeName,UnitPrice,TaxRate from inserted s
+left Join PackageTypes p on s.OuterPackageID=p.PackageTypeID
+
+end

@@ -1,0 +1,39 @@
+//5
+select p.ID as ProductID,p.ProductName,Quantity from Product p
+
+join OrderDetails o on p.ID=o.ProductID
+where Quantity=(select MAX(Quantity) from OrderDetails)
+
+//6
+select c.ID as CustomerID,c.CustomerName,COUNT(o.ID) from Customer c
+join Orders o on o.CustomerID=c.ID
+group by c.ID,c.CustomerName
+having COUNT(o.ID)= (select top 1 COUNT(o.ID) as MAXcount from Orders o
+join Customer c on o.CustomerID=c.ID
+group by c.ID,c.CustomerName
+order by COUNT(o.ID) desc)
+
+//8
+create proc CountProduct 
+@OrderID nvarchar(255),
+@NbProducts int output
+
+as
+begin
+
+select @NbProducts=COUNT(distinct OrderDetails.ProductID) from OrderDetails
+where OrderDetails.OrderID=@OrderID
+
+end
+
+//9
+create trigger InsertProduct
+on Product
+after insert
+as
+begin
+
+select inserted.ProductName,SubCategory.SubCategoryName from inserted
+join SubCategory on inserted.SubCategoryID=SubCategory.ID
+
+end

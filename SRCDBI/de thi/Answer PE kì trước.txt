@@ -1,0 +1,7 @@
+select r.Reservation_Number,r.Amount,r.Pick_up_date,r.Return_date,
+c.First_Name+' '+c.Last_Name as CustomerFullname,l.Country as PickupCountry,l1.Country as ReturnCountry from Rentals r
+Join Customers c on c.ID=r.Customer_ID
+join Location l on l.ID=r.Pick_up_location
+join Location l1 on l1.ID=r.Return_location
+where not l.Country=l1.Country
+order by r.Amount desc

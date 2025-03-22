@@ -1,0 +1,61 @@
+//1
+create table Departments(
+DepID varchar(10) primary key,
+DepName nvarchar(40),
+DepDescription nvarchar(200)
+)
+
+create table Lecturers(
+LecID varchar(10) primary key,
+FirstName nvarchar(30),
+LastName nvarchar(30),
+WorkDate date,
+DepID varchar(10) references Departments(DepID)
+)
+create table Subjects(
+SubID varchar(10) primary key,
+SubName nvarchar(30),
+NumberOfPerson int,
+SubDescription nvarchar(200)
+)
+create table Lecture(
+Semester nvarchar(30),
+SchoolYear varchar(15),
+SubID varchar(10) references Subjects(SubID),
+LecID varchar(10) references Lecturers(LecID)
+)
+
+//2
+select location_id,department_id,department_name from departments
+where location_id>2400
+
+//3
+select location_id,l.country_id,l.street_address,l.city from locations l
+join countries c on c.country_id=l.country_id
+where l.country_id ='US' or l.country_id='CA'
+order by location_id desc
+
+//4
+select e.employee_id,e.first_name+', '+last_name as full_name,j.job_title,e.phone_number from employees e
+join jobs j on j.job_id=e.job_id
+where j.job_title='Programmer' and e.phone_number like '590%'
+order by phone_number
+
+//5
+select d.department_id,d.department_name,MIN(e.salary) as [MIN(salary)] from departments d
+join employees e on e.department_id=d.department_id
+group by d.department_id,d.department_name
+order by MIN(e.salary)
+
+//6
+
+//7
+select c.country_id,c.country_name,count(e.employee_id) as [number of employees] from countries c
+join locations l on l.country_id=c.country_id
+join departments d on d.location_id=l.location_id
+join employees e on e.department_id=d.department_id
+group by c.country_id,c.country_name
+having count(e.employee_id)>=2
+order by [number of employees] desc
+
+//8

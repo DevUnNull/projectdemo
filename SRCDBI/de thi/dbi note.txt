@@ -1,0 +1,94 @@
+quý 1:tháng 1 đến hết tháng 3
+quý 2 :tháng 4 đến hết tháng 6
+quý 3: tháng 7 đến hết tháng 9
+quý 4: tháng 10 đến hết tháng 12
+
+Tháng 1: January – Jan
+Tháng 2: February – Feb
+Tháng 3: March – Mar
+Tháng 4: April – Apr
+Tháng 5: May – May
+Tháng 6: June – Jun
+Tháng 7: July – Jul
+Tháng 8: August – Aug
+Tháng 9: September – Sep
+Tháng 10: October – Oct
+Tháng 11: November – No
+Tháng 12: December – Dec
+
+Mùa (Season)	Loại từ	Nghĩa tiếng Việt
+Spring		Mùa Xuân
+Summer		Mùa Hạ
+Autumn/Fall	Mùa Thu
+Winter		Mùa Đông
+
+
+corresponding:tương ứng
+belonging:thuộc về
+STT	HÀM	MÔ TẢ
+1	ADDDATE()	Thêm một khoảng thời gian vào date
+2	ADDTIME()	Thêm một khoảng thời gian vào time
+3	CONVERT_TZ()	Chuyển đổi múi giờ
+4	CURDATE()	Trả về ngày hiện tại
+5	CURRENT_DATE()	Trả về ngày hiện tại
+6	CURRENT_TIME()	Trả về thời gian hiện tại
+7	CURRENT_TIMESTAMP()	Trả về ngày và thời gian hiện tại
+8	CURTIME()	Trả về thời gian hiện tại
+9	DATE_ADD()	Cộng thời gian
+10	DATE_FORMAT()	Định dạng giá trị thời gian
+11	DATE_SUB()	Trừ thời gian
+12	DATE()	Trả về phần ngày của biểu thức thời gian
+13	DATEDIFF()	Trả về chênh lệch giữa hai giá trị thời gian
+14	DAY()	Trả về thứ tự ngày trong tháng (từ 0 đến 31)
+15	DAYNAME()	Trả về tên của ngày trong tuần
+16	DAYOFMONTH()	Trả về thứ tự ngày trong tháng (từ 0 đến 31)
+17	DAYOFWEEK()	Trả về chỉ số ngày trong tuần (1 = Sunday, 2 = Monday... 7 = Saturday)
+18	DAYOFYEAR()	Trả về thứ tự ngày trong năm (từ 1 đến 366)
+19	EXTRACT	Trích giá trị thời gian từ biểu thức ban đầu
+20	FROM_DAYS()	Chuyển đổi một số thành giá trị ngày
+21	FROM_UNIXTIME()	Trả về ngày đại diện cho tham số Unixtime ban đầu
+22	HOUR()	Trả về phần giờ từ biểu thức thời gian
+23	LAST_DAY()	Trả về giá trị tương ứng cho ngày cuối cùng của tháng
+24	LOCALTIME()	Trả về ngày giờ hiện tại
+25	LOCALTIMESTAMP()	Trả về ngày giờ hiện tại
+26	MAKEDATE()	Trả về một ngày với các tham số truyền vào
+27	MAKETIME()	Trả về giá trị thời gian với các tham số truyền vào
+28	MICROSECOND()	Trả về microsecond từ biểu thức ban đầu
+29	MINUTE()	Trả về giá trị phút từ biểu thức thời gian
+30	MONTH()	Trả về giá trị tháng từ biểu thức thời gian
+31	MONTHNAME()	Trả về tên tháng từ biểu thức thời gian
+32	NOW()	Trả về ngày giờ hiện tại
+33	PERIOD_ADD()	Thêm một khoảng thời gian cho tháng trong năm
+34	PERIOD_DIFF()	Trả về số tháng giữa các khoảng thời gian
+35	QUARTER()	Trả về giá trị quý từ biểu thức thời gian
+36	SEC_TO_TIME()	Chuyển đổi số giây sang định dạng 'HH: MM: SS'
+37	SECOND()	Trả về giá trị giây từ biểu thức thời gian
+38	STR_TO_DATE()	Chuyển đổi một chuỗi thành một ngày
+39	SUBDATE()	Trừ một khoảng thời gian từ date truyền vào
+40	SUBTIME()	Trừ hai khoảng thời gian
+41	SYSDATE()	Trả về ngày giờ hiện tại
+42	TIME_FORMAT()	Định dạng giá trị thời gian
+43	TIME_TO_SEC()	Trả về số giây được chuyển đổi từ tham số ban đầu
+44	TIME()	Trả về giá trị thời gian từ biểu thức ban đầu
+45	TIMEDIFF()	Trả về chênh lệch giữa hai giá trị thời gian
+46	TIMESTAMP()	Trả về biểu thức datetime
+47	TIMESTAMPADD()	Cộng khoảng thời gian được chỉ định vào tham số ban đầu
+48	TIMESTAMPDIFF()	Trả về một số nguyên thể hiện sự chênh lệch thời gian giữa hai biểu thức
+49	TO_DAYS()	Trả về số ngày giữa giá trị thời gian date và năm 0
+50	UNIX_TIMESTAMP()	Trả về số giây theo Unix timestamp từ biểu thức ban đầu
+51	UTC_DATE()	Trả về ngày UTC hiện tại
+52	UTC_TIME()	Trả về giờ UTC hiện tại
+53	UTC_TIMESTAMP()	Trả về ngày giờ UTC hiện tại
+54	WEEKDAY()	Trả về chỉ số ngày trong tuần (0 = Thứ Hai, 1 = Thứ Ba... 6 = Chủ Nhật)
+55	WEEKOFYEAR()	Trả về chỉ số tuần trong năm của biểu thức thời gian
+56	YEAR()	Trả về năm tương ứng của tham số ban đầu
+
+baggage:hành lý
+airline: hãng hàng không
+departing gate:cổng khởi hành
+arriving gate:cổng đến
+departing airport:sân bay khởi hành
+arriving airpot:sân bay đến
+arrival time:thời gian đến
+
+
