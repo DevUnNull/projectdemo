@@ -32,7 +32,7 @@ public class Sum extends HttpServlet {
         }
         
         if("even".equals(opt)){
-            for (int i=0;i<n;i++) {
+            for (int i=0;i<=n;i++) {
                 if(i%2 == 0){
                     total+=i;
                 }
@@ -42,7 +42,7 @@ public class Sum extends HttpServlet {
         }
         
         if("odd".equals(opt)){
-            for (int i=0;i<n;i++) {
+            for (int i=0;i<=n;i++) {
                 if(i%2 != 0){
                     total+=i;
                 }
