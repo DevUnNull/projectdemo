@@ -1,0 +1,9 @@
+    /**
+     * Calculate the Least Common Multiple (LCM) of two numbers.
+     * @param a First number.
+     * @param b Second number.
+     * @return The LCM of the two numbers.
+     */
+    public static int timUocChungNhoNhat(int a, int b) {
+        return a * (b / timUocChungLonNhat(a, b));
+    }

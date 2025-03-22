@@ -1,0 +1,12 @@
+    /**
+     * Check if a number is a prime number.
+     * @param number Number to check.
+     * @return True if the number is prime, otherwise false.
+     */
+    public static boolean kiemTraSoNguyenTo(int number) {
+        if (number <= 1) return false;
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) return false;
+        }
+        return true;
+    }

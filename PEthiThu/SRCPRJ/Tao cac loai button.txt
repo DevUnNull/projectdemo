@@ -1,0 +1,3 @@
+<button type="submit">Gửi</button>
+<button type="reset">Xóa</button>
+<button type="button" onclick="alert('Hello!')">Nhấn vào đây</button>

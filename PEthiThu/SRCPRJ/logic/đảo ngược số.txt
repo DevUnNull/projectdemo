@@ -1,0 +1,13 @@
+    /**
+     * Reverse an integer.
+     * @param number Number to reverse.
+     * @return The reversed number.
+     */
+    public static int daoNguocSo(int number) {
+        int reversed = 0;
+        while (number != 0) {
+            reversed = reversed * 10 + number % 10;
+            number /= 10;
+        }
+        return reversed;
+    }

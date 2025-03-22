@@ -1,0 +1,18 @@
+        if("even".equals(opt)){
+            for (Integer o : listArrInt) {
+                if(o%2 == 0){
+                    total+=o;
+                }
+            }
+            out.print(total);
+            return;
+        }
+        
+        if("odd".equals(opt)){
+            for (Integer o : listArrInt) {
+                if(o%2 != 0){
+                    total+=o;
+                }
+            }
+            out.print(total);
+        }

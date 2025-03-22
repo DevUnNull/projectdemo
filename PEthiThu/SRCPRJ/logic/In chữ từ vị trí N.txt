@@ -1,0 +1,4 @@
+        String result = string.substring(n);
+        out.print( result);
+vd: n =4
+có string = "FPT University" => "University"

@@ -1,0 +1,14 @@
+    /**
+     * Check if a number is a palindrome (e.g., 121, 12321, 4554).
+     * @param number Integer to check.
+     * @return True if the number is a palindrome, otherwise false.
+     */
+    public static boolean kiemTraPalindrome(int number) {
+        if (number < 0) return false;
+        int reversed = 0, original = number;
+        while (number != 0) {
+            reversed = reversed * 10 + number % 10;
+            number /= 10;
+        }
+        return original == reversed;
+    }

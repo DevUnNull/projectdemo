@@ -1,0 +1,4 @@
+String option = req.getParameter("option");
+if("length".equals(option)){
+            resp.getWriter().println(getStringLength(str)); // ham in ra gia tri
+        }

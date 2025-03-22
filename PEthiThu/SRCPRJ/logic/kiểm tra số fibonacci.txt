@@ -1,0 +1,15 @@
+    /**
+     * Calculate the Fibonacci number at position n.
+     * @param n The position in the Fibonacci sequence.
+     * @return The Fibonacci number at the given position.
+     */
+    public static int fibonacci(int n) {
+        if (n <= 1) return n;
+        int fib = 1, prevFib = 1;
+        for (int i = 2; i < n; ++i) {
+            int temp = fib;
+            fib += prevFib;
+            prevFib = temp;
+        }
+        return fib;
+    }

@@ -1,0 +1,28 @@
+public static int countVowels(String str) {
+    if (str == null) return 0;
+    
+    int count = 0;
+    str = str.toLowerCase(); // Chuyển thành chữ thường
+    for (char c : str.toCharArray()) {
+        if ("aeiou".indexOf(c) != -1) { // Kiểm tra nếu là nguyên âm
+            count++;
+        }
+    }
+    return count;
+}
+//ra 11
+
+---------------------------------------------------------
+public static int countVowels(String str) {
+            str = str.toLowerCase();
+            int count = 0;
+            for (char s : str.toCharArray()) {
+                
+                if("aeuoi".contains(s+"") && Character.isAlphabetic(s) ){
+                    count++;
+                }
+            }
+            out.print(count);
+            
+        }
+//ra 3

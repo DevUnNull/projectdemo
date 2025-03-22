@@ -1,0 +1,14 @@
+    /**
+     * Check if a person has reached a certain age based on their birth date.
+     * @param birthDate Date of birth.
+     * @param age Required age to check.
+     * @return True if the person has reached the required age, otherwise false.
+     */
+    public static boolean kiemTraXemDuTuoiChua(Date birthDate, int age) {
+        Calendar today = Calendar.getInstance();
+        Calendar birthDay = Calendar.getInstance();
+        birthDay.setTime(birthDate);
+        birthDay.add(Calendar.YEAR, age);
+        return !birthDay.after(today);
+    }
+}

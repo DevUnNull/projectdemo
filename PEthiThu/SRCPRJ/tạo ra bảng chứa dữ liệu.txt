@@ -1,0 +1,23 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>Tuổi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Nam</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Linh</td>
+            <td>22</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">Tổng số: 2 người</td>
+        </tr>
+    </tfoot>
+</table>

@@ -1,0 +1,29 @@
+        <form action="sum" method="GET">
+
+            <table border="0"> 
+                <!-- Tạo bảng không có đường viền (border="0") để bố trí form gọn gàng -->
+                
+                <tbody>
+                    <tr>
+                        <td>Enter an integer array:</td> 
+                        <td><input type="text" name="arr"></td> 
+                    </tr>
+                    <tr>
+                        <td>Choose an option:</td>
+                        <td><input type="radio" name="opt" value="odd">Odd
+                            <input type="radio" name="opt" value="even">Even</td>
+                    </tr>
+                    <tr>
+                        <td>Choose an option:</td>
+                        <td><select name="opt">
+                                <option value="1">Vowel characters</option>
+                                <option value="2">Length of string</option>
+                            </select>
+                        </td>
+                    </tr>
+                        <td><input type="submit" value="SUM"></td> 
+                        <td></td> 
+                    </tr>
+                </tbody>
+            </table>
+        </form>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Comestics Store</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Welcome to my store</div>
+        <form action="MainController" method="POST">
+            Select your product:
+            <select name="cmbComestics">
+                <option value="C01-Lip Stick-20">Lip Stick-20$</option>
+                <option value="C02-Perfume-100">Perfume-100$</option>
+                <option value="C03-Fresh Mask-5">Fresh Mask-5$</option>
+                <option value="C04-Hair Pharma-200">Hair Pharma-200$</option>
+                
+            </select>
+            <select name="cmbQuantity">
+                <option value="1">1 Item</option>
+                <option value="2">2 Items</option>
+                <option value="3">3 Items</option>
+                <option value="4">4 Items</option>
+                <option value="5">5 Items</option>
+                <option value="10">10 Items</option>
+                <option value="50">50 Items</option>               
+            </select>
+            <input type="submit" name="action" value="Add"/>
+            <input type="submit" name="action" value="View"/>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,5 @@
+                    <tr>
+                        <td>Choose an option:</td>
+                        <td><input type="radio" name="opt" value="odd">Odd
+                            <input type="radio" name="opt" value="even">Even</td>
+                    </tr>

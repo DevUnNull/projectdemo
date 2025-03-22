@@ -1,0 +1,8 @@
+    /**
+     * Check if a number is even.
+     * @param number Integer to check.
+     * @return True if the number is even, otherwise false.
+     */
+    public static boolean kiemTraSoChan(int number) {
+        return number % 2 == 0;
+    }

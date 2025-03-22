@@ -1,0 +1,14 @@
+    /**
+     * Calculate the Greatest Common Divisor (GCD) of two numbers.
+     * @param a First number.
+     * @param b Second number.
+     * @return The GCD of the two numbers.
+     */
+    public static int timUocChungLonNhat(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }

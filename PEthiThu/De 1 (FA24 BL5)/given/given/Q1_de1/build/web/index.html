@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Khai báo tài liệu HTML5 -->
+<html>
+    <head>
+        <title>TODO supply a title</title> 
+        <!-- Tiêu đề của trang web, cần thay đổi cho phù hợp -->
+        
+        <meta charset="UTF-8"> 
+        <!-- Định dạng ký tự là UTF-8 để hỗ trợ tiếng Việt và các ngôn ngữ khác -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- Giúp trang web hiển thị tốt trên các thiết bị di động -->
+    </head>
+    <body>
+        <!-- Phần thân của trang web -->
+        
+        <form action="bcnn" method="GET">
+            <!-- Biểu mẫu (form) gửi dữ liệu đến servlet có URL mapping là "bcnn" -->
+            <!-- Phương thức GET được sử dụng, nghĩa là dữ liệu sẽ được gửi qua URL -->
+        
+            <table border="0"> 
+                <!-- Tạo bảng không có đường viền (border="0") để bố trí form gọn gàng -->
+                
+                <tbody>
+                    <tr>
+                        <td>Enter integer number 1:</td> 
+                        <!-- Ô đầu tiên: Nhãn cho input -->
+                        <td><input type="text" name="a"></td> 
+                        <!-- Ô thứ hai: Ô nhập số nguyên thứ nhất, có tên là "a" -->
+                    </tr>
+                    
+                    <tr>
+                        <td>Enter integer number 2:</td>
+                        <td><input type="text" name="b"></td>
+                        <!-- Ô nhập số nguyên thứ hai, có tên là "b" -->
+                    </tr>
+                    
+                    <tr>
+                        <td>Enter integer number 3:</td>
+                        <td><input type="text" name="c"></td>
+                        <!-- Ô nhập số nguyên thứ ba, có tên là "c" -->
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="submit" value="EXECUTE LCM"></td> 
+                        <!-- Nút gửi dữ liệu (submit), khi nhấn sẽ gửi dữ liệu của ba ô input lên servlet "bcnn" -->
+                        <td></td> 
+                        <!-- Ô trống để căn chỉnh giao diện -->
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

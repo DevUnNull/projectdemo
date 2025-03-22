@@ -1,0 +1,16 @@
+1 Tạo hoặc lấy session hiện tại
+HttpSession session = request.getSession();
+
+2 Lưu dữ liệu vào session
+session.setAttribute("username", "huosi");
+Lưu trữ biến "username" với giá trị "huosi" vào session.
+
+3 Lấy dữ liệu từ session
+String user = (String) session.getAttribute("username");
+
+
+4 Xóa session hoặc thuộc tính
+-Xóa một giá trị:
+session.removeAttribute("username");
+-Hủy toàn bộ session:
+session.invalidate();

@@ -1,0 +1,6 @@
+<label>Choose an option:</label>
+        <select name="option">
+            <option value="vowel">Vowel characters</option>
+            <option value="consonant">Consonant characters</option>
+            <option value="length">String length</option>
+        </select>

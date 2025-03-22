@@ -1,0 +1,22 @@
+        PrintWriter out = resp.getWriter();
+        String arr = req.getParameter("arr");
+        String[] arrayString = arr.split(",");
+        List<Integer> listArrInt = new ArrayList<>();
+        
+        try {
+
+            for (String s : arrayString) {
+                int t = Integer.parseInt(s);
+
+                if (t <= 0) {
+                    out.print("You must input an integer array");
+                    return;
+                }
+                
+                listArrInt.add(t);
+            }
+
+        } catch (NumberFormatException ex) {
+            out.print("You must input an integer array");
+            return;
+        }

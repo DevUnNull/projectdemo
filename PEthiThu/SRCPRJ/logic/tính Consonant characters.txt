@@ -1,0 +1,8 @@
+        if("Consonant characters".equals(opt)){
+            int count = 0;
+            for (char s : str.toLowerCase().toCharArray()) {
+                
+                if(!"aeuoi".contains(s+"") && Character.isAlphabetic(s) ){
+                    count++;
+                }
+            }

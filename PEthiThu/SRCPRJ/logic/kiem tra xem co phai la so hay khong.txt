@@ -1,0 +1,13 @@
+public class NumberCheck {
+    public static boolean isNumeric(String str) {
+        if (str == null || str.isEmpty()) {
+            return false; // Nếu chuỗi rỗng hoặc null, trả về false
+        }
+        try {
+            Double.parseDouble(str); // Thử chuyển đổi sang số
+            return true;
+        } catch (NumberFormatException e) {
+            return false; // Nếu lỗi, không phải số
+        }
+    }
+}

@@ -1,0 +1,12 @@
+   /**
+     * Calculate the factorial of a number.
+     * @param number Number to calculate factorial for.
+     * @return The factorial value.
+     */
+    public static long tinhGiaiThua(int number) {
+        long result = 1;
+        for (int i = 2; i <= number; i++) {
+            result *= i;
+        }
+        return result;
+    }

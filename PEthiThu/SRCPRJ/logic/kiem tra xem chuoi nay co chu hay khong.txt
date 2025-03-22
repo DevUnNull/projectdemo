@@ -1,0 +1,13 @@
+            if (str == null || str.trim().isEmpty()) {
+                throw new IllegalArgumentException("Invalid input.");
+            }
+
+
+
+hoặc có thể dùng cái này 
+    public boolean checkSTR(String str){
+        if (str == null || str.trim().isEmpty()) {
+                throw new IllegalArgumentException("Invalid input.");
+            }
+        return false;
+    }

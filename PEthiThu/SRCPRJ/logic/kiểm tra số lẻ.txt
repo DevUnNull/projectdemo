@@ -1,0 +1,9 @@
+
+    /**
+     * Check if a number is odd.
+     * @param number Integer to check.
+     * @return True if the number is odd, otherwise false.
+     */
+    public static boolean kiemTraSoLe(int number) {
+        return number % 2 != 0;
+    }

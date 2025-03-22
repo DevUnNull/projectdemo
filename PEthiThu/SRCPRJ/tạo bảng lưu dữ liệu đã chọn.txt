@@ -1,0 +1,19 @@
+chi tiết ở bài Q2_de2
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>String str</th>
+                    <th>Option</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${list}" var="o">
+                    <tr>
+                        <td>${o.str}</td>
+                        <td>${o.opt}</td>
+                        <td>${o.res}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
