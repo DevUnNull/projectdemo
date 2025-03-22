@@ -1,4 +1,6 @@
-        <form action="sum" method="GET">
+ 
+// class index
+       <form action="sum" method="GET">
 
             <table border="0"> 
                 <!-- Tạo bảng không có đường viền (border="0") để bố trí form gọn gàng -->
